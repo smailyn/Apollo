@@ -1,0 +1,233 @@
+@import "../bootstrap/assets/stylesheets/bootstrap-sprockets.scss";
+@import "../bootstrap/assets/stylesheets/bootstrap.scss";
+@import "../bootstrap/assets/stylesheets/bootstrap/variables.scss";
+  
+/* star layout */
+
+//$brand-primary:         red	!default; // #337ab7
+
+body{
+	text-rendering:optimizelegibility;
+}
+section{
+	margin:20px;
+}
+img{
+	width:100%;
+}
+h1,h2,h3{
+	color:#000;
+	font-width:bold;
+	span{
+		color:#555;
+	}
+}
+p{
+	color:#000000;
+}
+.navbar{
+	background-color: transparent;
+	border:none;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:10px;
+		&-toggle{
+			background-color: transparent;
+			border:none;
+			top:8px;
+			.icon-bar{
+				transition: 0.3 ease;	
+			}	
+			&:before{
+				//content:"menu";
+				text-transform:uppercase;
+				display:block;
+				position: relative;
+				left:-55px;
+				top:15px;
+			}
+		}
+	.navbar-collapse{
+		position:absolute;
+		width:100%;
+		ul{
+			background-color: #000000;
+			li{
+				display:inline-block;
+				text-align:center;
+				@media (max-width:$screen-xs){
+					display: block;
+					background-color: #000000;
+				}
+				a{
+					color:#fff;
+					text-transform: uppercase;
+					@media (max-width:$screen-xs){
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+.navbar-toggle.toggled{
+	span.one{
+		transform: translateY(6px) rotate(45deg);
+	}
+	span.two{
+		opacity:0;
+	}
+	span.three{
+		transform: translateY(-6px) rotate(-45deg);
+	}
+}
+.home{
+	padding-top:15em;
+	padding-bottom:15em;
+	background-color: $brand-primary;
+	background-image: url("../img/bg-home.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 45%;
+}
+.about{
+	.container{
+		padding-top:35px;
+		padding-bottom:35px;
+	}
+	figure img{
+		filter:grayscale(1);
+	}
+	h2{
+		margin-left: 60px;
+	}
+	h2 span:before{
+		content:"";
+		display:block;
+		position:relative;
+		width:50px;
+		height:1.2px;
+		top:15px;
+		right:60px;
+		background-color:#000000;
+	}
+	.social-about{
+		i{
+			background-color: #909090;
+			width:30px;
+			height:30px;
+			font-size:1.2em;
+			text-align:center;
+			line-height: 30px;
+			margin-left: 15px;
+			margin-top: 75px;
+			margin-bottom: 25px;
+			-webkit-transition:background-color 0.1s ease;
+			&:hover{
+				background-color: #000000;
+				color:#fff;
+			}
+		}
+	}
+}
+.portafolio-one{
+	.carousel-fade .carousel-inner .item {
+	  -webkit-transition-property: opacity;
+	          transition-property: opacity;
+	}
+	.carousel-fade .carousel-inner .item,
+	.carousel-fade .carousel-inner .active.left,
+	.carousel-fade .carousel-inner .active.right {
+	  opacity: 0;
+	}
+	.carousel-fade .carousel-inner .active,
+	.carousel-fade .carousel-inner .next.left,
+	.carousel-fade .carousel-inner .prev.right {
+	  opacity: 1;
+	}
+	.carousel-fade .carousel-inner .next,
+	.carousel-fade .carousel-inner .prev,
+	.carousel-fade .carousel-inner .active.left,
+	.carousel-fade .carousel-inner .active.right {
+	  left: 0;
+	  -webkit-transform: translate3d(0, 0, 0);
+	          transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-control {
+	  z-index: 2;
+	}
+	.carousel{
+		img{
+			width:100%;
+			height:60%;
+		}
+		.left,.right{
+			background-image:none;
+		}
+		.ion-chevron-left,.ion-chevron-right{
+			margin-top:140%;
+			background-color: #ffffff;
+			height:50px;
+			width:50px;
+			line-height: 50px;
+			color:#000000;
+		}
+	}
+}
+.portafolio-two{
+	.content{
+		padding-top:10em;
+	}
+	img{
+			padding-bottom:10em;
+	}
+}
+.contact{
+	.container{
+		padding-top:75px;
+		padding-bottom:75px;
+	}
+	.form-control{
+		margin-top: 25px;
+		background-color: #fff;
+		border:1px solid #000000;
+		box-shadow:none;
+		border-radius:0;
+		@media (max-width:$screen-xs){
+			&{
+				margin-top: 0px;
+			}
+		}
+		@media (max-width:$screen-sm){
+			&{
+				margin-top: 0px;
+			}
+		}
+	} 
+	::-webkit-input-placeholder{
+		color:#000000;
+	}
+	::-moz-input-placeholder{
+		color:#000000;
+	}
+	::-ms-input-placeholder{
+		color:#000000;
+	}
+	textarea.form-control{
+		margin-top: 0.3em;
+		height:100px;
+	}
+	.btn{
+		@media (max-width:$screen-xs){
+			&{
+				margin-top: -18px;
+			}
+		}
+		@media (max-width:$screen-sm){
+			&{
+				margin-top: -18px;
+			}
+		}
+	}	
+}
+/* end home section*/
